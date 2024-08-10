@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="Pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Calculadora</title>
+    <link rel="icon" href="assets/Projet.png" alt="Calculation">
+</head>
+
+<body>
+
+    <div class="container">
+        
+        <div class="calculator">
+            <form name="calculatorForm">
+                <div class="result">
+                    <input type="text" name="result" placeholder="0" readonly>
+                </div>
+                <div>
+                    <input type="button" value="CE" onclick="clearResult()"        class="operators">
+                    <input type="button" value="<" onclick="deleteLastCharacter()" class="operators">
+                    <input type="button" value="." onclick="appendDecimal()"       class="operators">
+                    <input type="button" value="÷" onclick="operators('/')"   class="operators">
+                </div>
+                <div>
+                    <input type="button" value="7" onclick="checkValue('7')">
+                    <input type="button" value="8" onclick="checkValue('8')">
+                    <input type="button" value="9" onclick="checkValue('9')">
+                    <input type="button" value="x" onclick="operators('*')" class="operators">
+                </div>
+                <div>
+                    <input type="button" value="4" onclick="checkValue('4')">
+                    <input type="button" value="5" onclick="checkValue('5')">
+                    <input type="button" value="6" onclick="checkValue('6')">
+                    <input type="button" value="-" onclick="operators('-')" class="operators">
+                </div>
+                <div>
+                    <input type="button" value="1" onclick="checkValue('1')">
+                    <input type="button" value="2" onclick="checkValue('2')">
+                    <input type="button" value="3" onclick="checkValue('3')">
+                    <input type="button" value="+" onclick="operators('+')" class="operators">
+                </div>
+                <div>
+                    <input type="button" value="0" onclick="checkValue('0')" class="zero">
+                    <input type="button" value="=" class="equal" onclick="calculateResult()">
+                </div>
+                <p>© 2024. All rights reserved</p>
+            </form>
+        </div>
+
+    </div>
+
+<script src="script.js"></script>
+</body>
+
+</html>
